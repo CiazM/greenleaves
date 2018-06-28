@@ -1,0 +1,10 @@
+<VirtualHost *:<%= @port %> >
+        ServerName <%= @domain %>
+        DocumentRoot <%= @document_root %>
+<Directory <%= @document_root %> >
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride None
+        Order allow,deny
+        allow from all
+</Directory>
+</VirtualHost>
